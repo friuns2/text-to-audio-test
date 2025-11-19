@@ -1,0 +1,5 @@
+{
+  "name": "Text to Audio Converter",
+  "description": "A web application that converts text into high-quality spoken audio using Google's Gemini API. Users can input text, select from a variety of voices, and generate and play the audio directly in the browser.",
+  "requestFramePermissions": []
+}
