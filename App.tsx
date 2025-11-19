@@ -12,7 +12,7 @@ interface WordTiming {
 }
 
 const App: React.FC = () => {
-  const [text, setText] = useState<string>('whatsapp! I am a powerful text-to-speech model from Google. I can now stream audio and highlight words as I speak.');
+  const [text, setText] = useState<string>('Hello! I am a powerful text-to-speech model from Google. I can now stream audio and highlight words as I speak.');
   const [selectedVoice, setSelectedVoice] = useState<string>(VOICES[0].value);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
