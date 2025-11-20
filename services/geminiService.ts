@@ -12,6 +12,7 @@ const ai = new GoogleGenAI({ apiKey: API_KEY });
 export const generateSpeechStream = async (
   text: string,
   voice: string,
+  tone: string,
   onAudioChunk: (chunk: string) => void,
   onStreamEnd: () => void,
   onError: (error: Error) => void
@@ -19,7 +20,7 @@ export const generateSpeechStream = async (
   try {
     const response = await ai.models.generateContentStream({
       model: "gemini-2.5-flash-preview-tts",
-      contents: [{ parts: [{ text: `Say with a natural pace: ${text}` }] }],
+      contents: [{ parts: [{ text: `Say ${tone}: ${text}` }] }],
       config: {
         responseModalities: [Modality.AUDIO],
         speechConfig: {
